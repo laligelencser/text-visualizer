@@ -8,7 +8,7 @@ const createdWordElements = []
 const scaleTo = 100
 
 export default () => {
-    const nodes = document.querySelectorAll('[datavis]')
+    const nodes = document.querySelectorAll('[textvis]')
     for (const node of nodes) {
         const allText = node.textContent.toLowerCase()
         const words = allText.match(/\w+/g) || []
