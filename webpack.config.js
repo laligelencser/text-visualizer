@@ -4,6 +4,13 @@ module.exports = {
   entry: './src/index.js',
   devtool: 'inline-source-map',
   mode: 'development',
+  devServer: {
+    stats: "errors-only",
+    host: process.env.HOST,
+    port: process.env.PORT,
+    open: true,
+    overlay: true,
+  },
   module: {
     rules: [
       {
@@ -12,7 +19,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.js' ]
+    extensions: ['.js']
   },
   output: {
     filename: 'bundle.js',
